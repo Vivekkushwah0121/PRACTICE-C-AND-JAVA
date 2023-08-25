@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    int i,c=0,n,temp,o;
+    char s[100];
+    printf("enter the number of string\n");
+    
+    gets(s);
+    n= strlen(s);
+    o=n-1;
+    for(i=0;i<o;i++){
+        temp=s[i];
+        s[i]=s[o];
+        s[o]=temp;
+        
+        o--;
+    }
+    puts(s);
+        
+      
+
+    return 0;
+}
