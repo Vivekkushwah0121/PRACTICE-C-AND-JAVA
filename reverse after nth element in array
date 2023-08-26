@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[1000];
+    int size,i,j,n,k,pair=0;
+ 
+   printf("enter the array size");
+   scanf("%d",&size);
+    for(k=0;k<size;k++){
+   scanf("%d",&arr[k]);
+    }
+   printf("enter the position after which you want to reverse the array");
+   scanf("%d",&n);
+   for(j=0;j<n;j++){
+   printf("%d",arr[j]);
+   }
+   
+   for(i=size-1;i>n-1;i--){
+      printf("%d",arr[i]);
+   }
+        
+
+    
+    
+
+
+
+    return 0;
+}
