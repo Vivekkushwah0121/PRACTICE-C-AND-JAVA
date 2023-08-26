@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    int s[]={0,1,2,2,3,4,5,6};
+    int i,j,n,pair=0;
+   
+    printf("enter the target value ");
+    scanf("%d",&n);
+    for(i=0;i<7;i++){
+        for(j=i+1;j<7;j++){
+        
+        if(s[i]+s[j]==n){
+            printf("pairs can be %d and %d\n\n",s[i],s[j]);
+            pair++;
+            
+        }
+    
+    }
+    
+}
+printf("pair are = %d\n",pair);
+
+
+    return 0;
+}
