@@ -1,0 +1,107 @@
+
+
+#include <stdio.h>
+
+int main()
+{
+   int x,y,c;
+   
+   printf("enter the volume of first jug");
+   scanf("%d",&x);
+   printf("enter the volume of second jug");
+   scanf("%d",&y);
+   printf("Rules are given below");
+   printf("1. Fill the 4 gallon jug completely\n");
+   printf("2. Fill the 3 gallon jug completely\n");
+   printf("3. Empty the 4 gallon jug\n ");
+   printf("4. Empty the 3 gallon jug\n");
+   printf("5. Pour some water from 3 gallon jug to fill the 4 gallon jug\n");
+   printf("6. pour some water from 4 gallon jug to fill 3 gallon jug completely\n ");
+   printf("7. Pour all water from 3 gallon jug to the 4 gallon jug\n ");
+   printf("8.  Pour all water from 4 gallon jug to the 3 gallon jug\n");
+   printf("Enter the rule");
+   scanf("%d",&c);
+  
+   switch(c){
+       
+    case 1:
+    {
+        if(x<4){
+       
+        printf("%d,%d",4,y);
+    }
+    }
+    break;
+    
+    case 2:
+    {
+     if(y>3){
+        
+        printf("%d,%d",x,3);
+        
+    }}
+    break;
+    
+    case 3:
+    {
+     if(y>0){
+        
+        printf("%d,%d",x,0);
+        
+     }   
+    }
+    break;
+    
+    
+    case 4:
+    {
+    if(x+y>=4&&y>0){
+        
+        printf("%d,%d",4,y-(x-3));
+        
+        
+    }}
+    break;
+    
+    case 5:
+    {
+    
+    if(x+y>=3&& x>0){
+        
+       printf("%d,%d",x-(3-y),3);
+        
+    }
+    }
+    break;
+     case 6:{
+    if(x+y<=4&&y>0){
+        
+        printf("%d,%d",x+y,0);
+        
+    }}
+    
+    break;
+    
+    case 7:
+    {
+    if(x+y<=3&& y>0){
+        
+        printf("%d,%d",0,x+y);
+        
+  
+    return 0;
+}}
+
+   default:
+   {
+   printf("enter the valid rule");
+        
+    }
+       
+   }
+    
+    
+    if(x==2){
+        printf("we have reached target ");
+    }
+}
